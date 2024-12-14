@@ -1,0 +1,83 @@
+<html>
+<head> <meta charset="utf-8"></head>
+<body>
+
+<!-- Form for Deleting Opettaja -->
+<form method="POST" action="poista_opettaja.php">
+    <h3>Poista Opettaja</h3>
+    <select name="poistettava_opettaja">
+    <?php
+        foreach ($opettaja as $opettaja) {
+            echo "<option value='{$opettaja['id']}'>{$opettaja['etunimi']}</option>";
+        }
+    ?>
+        <option value="1">Ville</option>
+        <option value="2">Terhi</option>
+        <option value="3">Olli</option>
+        <option value="4">Sara</option>
+        <option value="5">Jalmari</option>		
+    </select>
+    <p>
+        <input type="submit" value="Poista Opettaja">
+    </p>
+</form>
+
+<!-- Form for Deleting Opiskelija -->
+<form method="POST" action="poista_opiskelija.php">
+    <h3>Poista Opiskelija</h3>
+    <select name="poistettava_opiskelija">
+    <?php
+        foreach ($opiskelija as $opiskelija) {
+            echo "<option value='{$opiskelija['id']}'>{$opiskelija['etunimi']}</option>";
+        }
+    ?>
+      <option value="1">Samppa</option>
+        <option value="2">Alina</option>
+        <option value="3">Konrad</option>
+        <option value="4">Elviira</option>
+        <option value="5">Uuno</option>		
+    </select>
+    <p>
+        <input type="submit" value="Poista Opiskelija">
+    </p>
+</form>
+
+<!-- Form for Deleting Kurssi -->
+<form method="POST" action="poista_kurssi.php">
+    <h3>Poista Kurssi</h3>
+    <select name="poistettava_kurssi">
+    <?php
+        foreach ($kurssi as $kurssi) {
+            echo "<option value='{$kurssi['id']}'>{$kurssi['nimi']}</option>";
+        }
+    ?>
+      <option value="1">Matematiikka</option>
+        <option value="2">Musiikki</option>
+        <option value="3">Äidinkieli</option>
+        <option value="4">Englanti</option>
+        <option value="5">Liikunta</option>		
+    </select>
+    <p>
+        <input type="submit" value="Poista Kurssi">
+    </p>
+</form>
+
+<!-- Form for Deleting Kurssikirjautuminen -->
+<form method="POST" action="poista_kurssikirjautuminen.php">
+    <h3>Poista Kurssikirjautuminen</h3>
+    <select name="poistettava_kurssikirjautuminen">
+    <?php
+        foreach ($kurssikirjautumien as $kurssikirjautuminen) {
+            echo "<option value='{$kurssi['id']}'>{$kurssi['opiskelija']}</option>";
+        }
+    ?>
+      <option value="1">Samppa</option>
+        <option value="2">Alina</option>
+        <option value="3">Konrad</option>	
+    </select>
+    <p>
+        <input type="submit" value="Poista Kurssikirjautuminen">
+    </p>
+</form>
+</body>
+</html>
